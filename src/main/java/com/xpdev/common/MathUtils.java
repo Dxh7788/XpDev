@@ -6,6 +6,7 @@ package com.xpdev.common;
  */
 public class MathUtils {
     public static int add(int a, int b) {
+        System.out.println("两数相加....");
         return a + b;
     }
 }
