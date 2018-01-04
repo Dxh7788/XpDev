@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class TestTemplate {
     @Test
     public void oneVariable(){
-        assertEquals("aaa","bbb");
+        Template template = new Template("Hello","world");
+        assertEquals("Hello,world",template.evluate());
     }
 }
