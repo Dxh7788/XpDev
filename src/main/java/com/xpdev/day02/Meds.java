@@ -8,5 +8,9 @@ public class Meds {
 
     public void printo(){
         System.out.println("welcome the mockito world.");
+        printos();
+    }
+    public void printos(){
+        System.out.println("verify stubbing");
     }
 }
