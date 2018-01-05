@@ -10,6 +10,7 @@ public class MathUtils {
 
         System.out.println("两数相加....");
         System.out.println("两数相加....");
+        System.out.println("两数相乘....");
         return a + b;
     }
 }
