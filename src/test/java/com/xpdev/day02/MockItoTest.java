@@ -26,10 +26,17 @@ public class MockItoTest {
         /**
          * verify get() is invoked or not.
          * */
-        verify(ls).get(0);
+        System.out.println(verify(ls).get(0));
+        System.out.println(result);
         /**
          * JUnit Assert
          * */
         Assert.assertEquals("hello,mockito",result);
+    }
+
+    @Test
+    public void mockItoTest2(){
+        Meds meds = mock(Meds.class);
+        meds.printo();
     }
 }
