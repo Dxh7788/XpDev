@@ -17,10 +17,19 @@ public class MockItoTest {
     @Test
     public void mockItoTest(){
         List<String> ls = mock(List.class);
+        /**
+         * expected value when invoke ls.get(0)
+         * */
         when(ls.get(0)).thenReturn("hello,mockito");
 
         String result = ls.get(0);
+        /**
+         * verify get() is invoked or not.
+         * */
         verify(ls).get(0);
+        /**
+         * JUnit Assert
+         * */
         Assert.assertEquals("hello,mockito",result);
     }
 }
