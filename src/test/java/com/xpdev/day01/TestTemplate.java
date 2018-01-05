@@ -13,6 +13,7 @@ public class TestTemplate {
     public void oneVariable(){
         Template template = new Template("Hello","world");
         Template template2 = new Template("Hello","world");
+        Template template3 = new Template("Hello","world");
 
         /**
          * equals assert
