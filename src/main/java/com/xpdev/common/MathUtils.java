@@ -8,6 +8,8 @@ public class MathUtils {
     public static int add(int a, int b) {
         
         System.out.println("两数相乘....");
+        System.out.println("两数相除....");
+        System.out.println("专治各种不服....");
         return a + b;
     }
 }
