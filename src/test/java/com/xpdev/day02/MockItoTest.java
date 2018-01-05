@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.List;
 
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -14,10 +15,14 @@ import static org.mockito.Mockito.when;
  */
 public class MockItoTest {
 
+    /**
+     * 使用when测试
+     * */
     @Test
     public void mockItoTest(){
         List<String> ls = mock(List.class);
         /**
+         * stubbing.
          * expected value when invoke ls.get(0)
          * */
         when(ls.get(0)).thenReturn("hello,mockito");
@@ -34,9 +39,17 @@ public class MockItoTest {
         Assert.assertEquals("hello,mockito",result);
     }
 
+    /**
+     * 使用given测试
+     * */
     @Test
     public void mockItoTest2(){
-        Meds meds = mock(Meds.class);
-        meds.printo();
+        List<String> ls = mock(List.class);
+        /**
+         * stubbing
+         * */
+        given(ls.get(0)).willReturn("hello,mockito");
+        String value = ls.get(0);
+        System.out.println(value);
     }
 }
