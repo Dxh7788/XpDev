@@ -28,6 +28,7 @@ public class MathUtilsTest {
         this.numberA = numberA;
         this.numberB = numberB;
         this.expected = expected;
+        
     }
 
     //Declares parameters here
