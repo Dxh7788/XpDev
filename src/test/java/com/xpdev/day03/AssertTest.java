@@ -16,5 +16,9 @@ public class AssertTest {
         Template template = new Template("Hello,{name}");
         template.set("name","kotlin");
         assertEquals("Hello,kotlin",template.evluate());
+
+        Template template1 = new Template("Hello,{name}");
+        template1.set("name","someone else");
+        assertEquals("Hello,someone else",template1.evluate());
     }
 }
