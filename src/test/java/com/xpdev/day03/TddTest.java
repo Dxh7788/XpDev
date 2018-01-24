@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -43,5 +44,21 @@ public class TddTest {
          * */
         when(template1.evluate1()).thenReturn("Hello,mock");
         assertEquals(template1.evluate1(),template.evluate());
+    }
+
+    @Test
+    public void failTddTest(){
+        try {
+            Template template = new Template("Hello,{name}");
+            template.set("name", "mock");
+            /**
+             * Template 的evluate1暂时还没有具体实现
+             * */
+            when(template1.evluate1()).thenReturn("Hello,mock");
+//            fail("测试fail消息");
+            assertEquals(template1.evluate1(), template.evluate());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
