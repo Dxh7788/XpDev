@@ -28,11 +28,9 @@ public class Template {
         this.node = node;
     }
 
-    public void set(String value){
+    public void set(String variable,String value){
         //find the position to be replaced
-        int pos1 = node.indexOf("{");
-        int pos2 = node.indexOf("}");
-        String sub = node.substring(pos1,pos2+1);
+        String sub = "{"+variable+"}";
         this.node = node.replace(sub,value);
     }
     public String evluate(){

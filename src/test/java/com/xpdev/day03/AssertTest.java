@@ -14,7 +14,7 @@ public class AssertTest {
     @Test
     public void testAssert(){
         Template template = new Template("Hello,{name}");
-        template.set("kotlin");
+        template.set("name","kotlin");
         assertEquals("Hello,kotlin",template.evluate());
     }
 }
