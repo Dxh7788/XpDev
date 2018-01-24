@@ -36,4 +36,7 @@ public class Template {
     public String evluate(){
         return this.node;
     }
+    public String evluate1(){
+        return null;
+    }
 }
